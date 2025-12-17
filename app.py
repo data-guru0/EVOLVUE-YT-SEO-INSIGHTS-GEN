@@ -15,8 +15,8 @@ logger = get_logger(__name__)
 
 st.set_page_config(page_title="YT SEO Isnsights", layout="wide")
 
-st.title("AI YT SEO Insights Generator")
-st.write("Generate Tags , Audience Analysis , Timestamps AI Generated , Flaws Suggestions")
+st.title("AI YT SEO Insights Generator ")
+st.write("AI Generated Tags , Audience Analysis , Timestamps AI Generated , Flaws Suggestions")
 
 with st.sidebar:
     st.header("API Settings")
