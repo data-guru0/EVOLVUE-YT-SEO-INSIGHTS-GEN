@@ -39,7 +39,7 @@ pipeline {
             steps {
                 script {
                     sh """
-                    sed -i 's|image: dataguru97/seo-testing:.*|image: dataguru97/seo-testing:${IMAGE_TAG}|' manifests/deployment.yaml
+                    sed -i 's|image: dataguru97/evolue-seo:.*|image: dataguru97/evolue-seo:g:${IMAGE_TAG}|' manifests/deployment.yaml
                     """
                 }
             }
