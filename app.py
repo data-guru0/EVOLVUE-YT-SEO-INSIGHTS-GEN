@@ -39,15 +39,15 @@ if url:
         metadata=get_video_metadata(url)
 
         st.subheader("Video Details")
-        st.write(f"**Title:** {metadata["title"]}")
-        st.write(f"**Creator:** {metadata["author"]}")
-        st.write(f"**Views:** {metadata["views"]}")
+        st.write(f"**Title:** {metadata['title']}")
+        st.write(f"**Creator:** {metadata['author']}")
+        st.write(f"**Views:** {metadata['views']}")
 
-        duration = metadata["duration"]
+        duration = metadata['duration']
         minutes = duration // 60
         st.write(f"**Duration:** {minutes} minutes")
 
-        st.image(metadata["thumbnail_url"], width=400)
+        st.image(metadata['thumbnail_url'], width=400)
 
         if st.button("Generate Insights"):
             if not os.getenv("OPENAI_API_KEY"):
@@ -88,7 +88,7 @@ if data:
 
     st.subheader("AI Generated Timestamps 😊")
     for ts in data["timestamps"]:
-        st.markdown(f"**{ts['time']} - {ts["description"]}**")
+        st.markdown(f"**{ts['time']} - {ts['description']}**")
 
     st.info("Generated Timestamps for the video")
 
@@ -100,11 +100,11 @@ if data:
 
     for flaw in data["flaws"]:
         st.markdown(f"""
-            **❌ Issue:**  {flaw["issue"]}  
+            **❌ Issue:**  {flaw['issue']}  
 
-            **⚡Why It Hurts:** {flaw["why_it_hurts"]}  
+            **⚡Why It Hurts:** {flaw['why_it_hurts']}  
             
-            **✅ Fix:** {flaw["fix"]}  
+            **✅ Fix:** {flaw['fix']}  
         """)
 
 
