@@ -10,56 +10,56 @@ pipeline {
             }
         }
 
-        stage('Build Docker Image') {
-            steps {
-                script {
-                    echo 'Building Docker image...'
-                }
-            }
-        }
+        // stage('Build Docker Image') {
+        //     steps {
+        //         script {
+        //             echo 'Building Docker image...'
+        //         }
+        //     }
+        // }
 
-        stage('Push Image to DockerHub') {
-            steps {
-                script {
-                    echo 'Pushing Docker image to DockerHub...'
-                }
-            }
-        }
+        // stage('Push Image to DockerHub') {
+        //     steps {
+        //         script {
+        //             echo 'Pushing Docker image to DockerHub...'
+        //         }
+        //     }
+        // }
 
-        stage('Update Deployment YAML with New Tag') {
-            steps {
-                script {
-                }
-            }
-        }
+        // stage('Update Deployment YAML with New Tag') {
+        //     steps {
+        //         script {
+        //         }
+        //     }
+        // }
 
-        stage('Commit Updated YAML') {
-            steps {
-                script {
-                    withCredentials([
-                        usernamePassword(
-                            credentialsId: 'github-token',
-                            usernameVariable: 'GIT_USER',
-                            passwordVariable: 'GIT_PASS'
-                        )
-                    ]) {
+        // stage('Commit Updated YAML') {
+        //     steps {
+        //         script {
+        //             withCredentials([
+        //                 usernamePassword(
+        //                     credentialsId: 'github-token',
+        //                     usernameVariable: 'GIT_USER',
+        //                     passwordVariable: 'GIT_PASS'
+        //                 )
+        //             ]) {
 
-                    }
-                }
-            }
-        }
+        //             }
+        //         }
+        //     }
+        // }
 
-        stage('Install Kubectl & ArgoCD CLI Setup') {
-            steps {
-            }
-        }
+        // stage('Install Kubectl & ArgoCD CLI Setup') {
+        //     steps {
+        //     }
+        // }
 
-        stage('Apply Kubernetes & Sync App with ArgoCD') {
-            steps {
-                script {
-                }
-            }
-        }
+        // stage('Apply Kubernetes & Sync App with ArgoCD') {
+        //     steps {
+        //         script {
+        //         }
+        //     }
+        // }
 
     }
 }
