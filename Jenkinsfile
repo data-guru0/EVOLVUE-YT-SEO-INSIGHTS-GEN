@@ -60,7 +60,7 @@ pipeline {
                         git config user.email "gyrogodnon@gmail.com"
                         git add manifests/deployment.yaml
                         git commit -m "Update image tag to ${IMAGE_TAG}" || echo "No changes to commit"
-                        git push https://${GIT_USER}:${GIT_PASS}@github.com/data-guru0/YT-SEO-Gen-Testing.git HEAD:main
+                        git push https://${GIT_USER}:${GIT_PASS}@github.com/data-guru0/EVOLVUE-YT-SEO-INSIGHTS-GEN.git HEAD:main
                         '''
 
                     }
