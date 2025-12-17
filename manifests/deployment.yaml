@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: llmops-app
-          image: datag
+          image: dataguru97/evolue-seo:v454545545
           ports:
             - containerPort: 8501
